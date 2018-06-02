@@ -193,4 +193,15 @@ for letter in palabra:
         contador= contador+1
         print(str(contador))
 ```
-    
+## Funciones   
+**Ej.1 Ejecuta el siguiente programa:**
+```python
+def subrutina():
+    a = 2
+    print("El valor en subrutina es: " + str(a))
+    return
+
+subrutina()
+a= 5
+print("En programa el valor es: " + str(a))
+```
