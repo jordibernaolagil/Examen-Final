@@ -205,3 +205,90 @@ subrutina()
 a= 5
 print("En programa el valor es: " + str(a))
 ```
+**Ej.2 ) Ejecutar el siguiente programa. ¿La variable 'a' es local o global? 
+"Reparar" el programa para que el resultado sea correcto.** 
+```python
+def subrutina():
+    print(a)
+    a = 2
+    print(a)
+    return
+
+a = 5
+subrutina()
+print(a)
+```
+**Resuelto**
+```python
+def subrutina():
+    a = 2
+    print(a)
+    return
+
+a = 5
+subrutina()
+print(a)
+```
+**Solución**
+```python
+La primera "a" es local.
+La segunda "a" es global.
+```
+**Ej.3 Ejecuta el siguiente programa:**
+```python
+def saludar(nombre, mensaje=' Hola '):
+    print (mensaje + nombre)
+
+usuario = input ("Introduce nombre")
+saludar(usuario)
+```
+**Ej.4 Crear un programa con dos funciones. En el programa principal el usuario introduce su nombre y edad. En una función llamada 'Saludo' , aparece en pantalla  "Buenos dias, nombre" y en la otra función aparece en pantalla "Pareces más joven que x años".**
+```python
+def saludar(nombre, mensaje=' Hola '):
+    print (mensaje + nombre)
+def edad(n, mensaje=' Pareces más joven que '):
+    print (mensaje + str(n))
+
+usuario = input ("Introduce nombre")
+saludar(usuario)
+anyos = int(input("Introduce tu edad"))
+edad(anyos)
+```
+**Ej.5 Ejecutar el siguiente programa. ¿Qué diferencias hay con el anterior?**
+```python
+def calcula_media(x, y):
+    resultado = (x + y) / 2
+    return resultado
+
+a = 3
+b = 5
+media = calcula_media(a, b)
+print("Media de " + str(a) + " y " + str(b) + " es: " +str(media))
+print("Programa terminado")
+```
+**Diferencias**   
+Uno tiene operaciones matemáticas mientras que el otro no, además de que en este último hay solo una función, y no hay ningún "intput".
+
+**Ej.6 Realizar programa "Calculadora". El usuario introduce 2 numeros por teclado y en el programa hay 5 funciones: suma, resta, división, multiplicación y módulo de ambos números.**
+```python
+def calculadora():
+    operacion= int(input("Escribe la operación: 1= Suma, 2= Resta, 3= Multiplicación, 4= División"))
+    numero1 = float(input("Escribe un número"))
+    numero2 = float(input("Escribe otro número"))
+    operacionsuma = numero1+numero2
+    operacionresta =numero1-numero2
+    operacionmulti= numero1*numero2
+    operaciondivision= numero1/numero2
+    restodivision=numero1/numero2%2
+    if operacion== 1:
+        print ("El resultado es "+str(operacionsuma))
+    if operacion== "2":
+        print ("El resultado es "+str(operacionresta))
+    if operacion== 3:
+        print ("El resultado es "+str(operacionmulti))
+    if operacion== 4:
+        print ("El resultado es "+str(operaciondivision))
+        print ("El resto es " +str(restodivision))
+    return
+calculadora()
+```
